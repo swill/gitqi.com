@@ -671,7 +671,7 @@
         <div class="step-card">
           <div class="step-number">2</div>
           <div class="step-title" data-editable="">Edit</div>
-          <p class="step-desc" data-editable="">Click any text to change it. Click any image to replace it. Ask the AI to add a new section whenever you need one — just describe it in plain English.</p>
+          <p class="step-desc" data-editable="">Click any text to change it, click any link to update its URL, or click any image to replace it. Hover between sections and click + Add Section to describe what you want — the AI generates it, styled to match your site.</p>
         </div>
         <div class="step-card">
           <div class="step-number">3</div>
@@ -762,7 +762,7 @@
       <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.7; max-width: 680px; margin-bottom: var(--space-lg);" data-editable="">You use a prompt with Claude.ai (no account needed beyond the free tier) to generate a complete, styled index.html from a description of your business. The prompt instructs Claude to analyse inspiration images for colours and typography, write realistic placeholder content, and wire up all the data attributes Webby needs — so the editor works immediately on the generated file.</p>
       <div class="prompt-card">
         <span class="prompt-card-badge">Example prompt</span>
-        <pre>You are generating the initial index.html for a professional website.
+        <pre>You are generating the initial downloadable index.html for a professional website.
 
 I am attaching [N] inspiration images. Analyze them for:
 - Dominant and accent colors → translate to a CSS variable palette
@@ -835,18 +835,25 @@ OUTPUT: Return ONLY the complete index.html. No explanation, no markdown fences.
           <div class="step-badge">3</div>
           <div class="step-content">
             <div class="step-content-title" data-editable="">Create your secrets.js file</div>
-            <p class="step-content-desc" data-editable="">In the same folder as index.html, create a plain text file called secrets.js. Add your <a href="https://console.anthropic.com" target="_blank" rel="noopener">Anthropic API key</a>, your <a href="https://github.com/settings/tokens" target="_blank" rel="noopener">GitHub personal access token</a>, and your repository name. This file stays on your computer and is never published to GitHub — Webby's .gitignore keeps it safe automatically.</p>
+            <p class="step-content-desc" data-editable="">In the same folder as index.html, create a plain text file called secrets.js. Add your <a href="https://aistudio.google.com" target="_blank" rel="noopener">Gemini API key</a> (free from Google AI Studio — no billing required), your <a href="https://github.com/settings/tokens" target="_blank" rel="noopener">GitHub personal access token</a>, and your repository name. This file stays on your computer and is never published to GitHub.</p>
           </div>
         </li>
         <li class="get-started-step">
           <div class="step-badge">4</div>
           <div class="step-content">
             <div class="step-content-title" data-editable="">Open index.html in your browser</div>
-            <p class="step-content-desc" data-editable="">Double-click the file. The Webby editor will appear automatically at the top of the page. Click any text to edit it, click any image to replace it. Everything updates live as you work — no refresh needed.</p>
+            <p class="step-content-desc" data-editable="">Double-click the file. For the best experience use Chrome, Edge, or Safari — they support auto-saving your edits directly back to disk. Firefox works too, but you'll need to use the Export button to save your changes each session. The Webby editor will appear automatically at the top of the page.</p>
           </div>
         </li>
         <li class="get-started-step">
           <div class="step-badge">5</div>
+          <div class="step-content">
+            <div class="step-content-title" data-editable="">Link your site folder</div>
+            <p class="step-content-desc" data-editable="">A banner will appear below the toolbar on first open. Click <strong>Select Folder</strong> and choose the folder containing your index.html. Once linked, every edit auto-saves to your local file within a couple of seconds — so your changes are never lost if you close the tab or restart your browser.</p>
+          </div>
+        </li>
+        <li class="get-started-step">
+          <div class="step-badge">6</div>
           <div class="step-content">
             <div class="step-content-title" data-editable="">Hit Publish</div>
             <p class="step-content-desc" data-editable="">When you're happy with your edits, click the Publish button in the Webby toolbar. Webby will commit your changes to GitHub and your site will be live within about a minute. Every publish is a git commit, so your full history is always there.</p>
@@ -857,10 +864,10 @@ OUTPUT: Return ONLY the complete index.html. No explanation, no markdown fences.
       <div class="secrets-callout">
         <div class="secrets-callout-heading" data-editable="">What does secrets.js look like?</div>
         <pre>window.SITE_SECRETS = {
-  anthropicKey: "sk-ant-...",
-  githubToken:  "ghp_...",
-  repo:         "your-username/your-repo",
-  branch:       "main"
+  geminiKey:   "AIza...",          // Google AI Studio — free at aistudio.google.com
+  githubToken: "ghp_...",          // GitHub fine-grained PAT (contents: read + write)
+  repo:        "your-username/your-repo",
+  branch:      "main"
 };</pre>
       </div>
     </div>
@@ -889,11 +896,11 @@ OUTPUT: Return ONLY the complete index.html. No explanation, no markdown fences.
         </div>
         <div class="faq-item">
           <dt class="faq-question" data-editable="">Is this really free?</dt>
-          <dd class="faq-answer" data-editable="">Webby itself is free and open source (MIT license). GitHub Pages hosting is free. Claude.ai has a free tier that is sufficient for generating a site and adding sections occasionally. The Anthropic API key (used for AI section generation) has a small cost per use — typically a few cents per section generated.</dd>
+          <dd class="faq-answer" data-editable="">Webby itself is free and open source (MIT license). GitHub Pages hosting is free. Claude.ai has a free tier sufficient for generating your initial site. The Gemini API key used for AI section generation inside Webby is also free — Google AI Studio provides a generous free tier with no billing required.</dd>
         </div>
         <div class="faq-item">
           <dt class="faq-question" data-editable="">What happens to my credentials?</dt>
-          <dd class="faq-answer" data-editable="">Your API keys and tokens live only in secrets.js on your own computer. They are never committed to GitHub, never sent anywhere except directly to the Anthropic and GitHub APIs, and never stored by Webby. You are always in control.</dd>
+          <dd class="faq-answer" data-editable="">Your API keys and tokens live only in secrets.js on your own computer. They are never committed to GitHub, never sent anywhere except directly to the Google and GitHub APIs, and never stored by Webby. You are always in control.</dd>
         </div>
         <div class="faq-item">
           <dt class="faq-question" data-editable="">Can I use this for an existing site?</dt>
