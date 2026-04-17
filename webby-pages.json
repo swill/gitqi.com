@@ -1,0 +1,29 @@
+{
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Home — Webby",
+      "navLabel": "Home"
+    },
+    {
+      "file": "about.html",
+      "title": "About — Webby",
+      "navLabel": "About"
+    },
+    {
+      "file": "getting-started.html",
+      "title": "Getting Started — Webby",
+      "navLabel": "Getting Started"
+    },
+    {
+      "file": "features-and-editing.html",
+      "title": "Features & Editing — Webby",
+      "navLabel": "Features & Editing"
+    },
+    {
+      "file": "donate.html",
+      "title": "Donate — Webby",
+      "navLabel": "Donate"
+    }
+  ]
+}
