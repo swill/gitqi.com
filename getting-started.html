@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en" style="--font-dancing-script: 'Dancing Script', cursive;"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Getting Started — Webby</title>
 <meta name="description" content="Set up Webby in under ten minutes — write your bootstrap prompt, sign up for the free services, configure secrets.js, and make your first edit.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
-<style>
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><style>
   *, *::before, *::after { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
 
@@ -36,7 +36,8 @@
     --container-width: 1200px;
     --radius: 18px;
     --shadow: 0 24px 60px -24px rgba(26, 27, 58, 0.28);
-  }
+    --font-dancing-script: 'Dancing Script', cursive;
+}
 
   body {
     font-family: var(--font-body);
@@ -342,7 +343,7 @@
 </style>
 
 
-<link rel="icon" type="image/png" href="./assets/favicon.png"><link rel="apple-touch-icon" href="./assets/favicon.png"></head>
+<link rel="icon" type="image/png" href="./assets/favicon.png"><link rel="apple-touch-icon" href="./assets/favicon.png"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&amp;display=swap"></head>
 <body style="">
 <nav class="site-nav" style="">
   <div class="nav-inner">
@@ -379,7 +380,7 @@
   </script>
 </nav>
 
-<section class="hero hero--page" data-zone="hero" data-zone-label="Hero" id="hero">
+<section class="hero hero--page" data-zone="hero" data-zone-label="Hero" id="hero" style="">
   <div class="container hero-inner">
     <span class="hero-badge" data-editable=""><span class="dot"></span>Getting started</span>
     <h1 data-editable="">From empty folder to <span class="accent-word">published site</span> in five focused steps.</h1>
@@ -387,13 +388,13 @@
   </div>
 </section>
 
-<section class="section" data-zone="design-prompt" data-zone-label="Design Your Prompt" id="design-prompt">
+<section class="section" data-zone="design-prompt" data-zone-label="Design Your Prompt" id="design-prompt" style="">
   <div class="container">
     <div class="grid-2">
       <div>
         <span class="feature-chip chip-pink" data-editable="">Step 01 · Prompt</span>
         <h2 data-editable="">Design your initial <span class="accent-word magenta">prompt</span>.</h2>
-        <p data-editable="">Webby doesn't start from a template — it starts from <em>you</em>. Open the Bootstrap Prompt from the Webby repo, gather a handful of inspiration images (two to five is ideal), and describe what you're making and who it's for.</p>
+        <p data-editable="">Webby doesn't start from a template — it starts from <em>you</em>. Open the <span style="font-family: var(--font-dancing-script);"><span style="font-family: var(--font-body);">Bootstrap Prompt</span></span> from the Webby repo, gather a handful of inspiration images (two to five is ideal), and describe what you're making and who it's for.</p>
         <p data-editable="">A good prompt answers four questions:</p>
         <ul>
           <li data-editable=""><strong>Who</strong> you are — your business name, profession, and location.</li>
@@ -578,6 +579,7 @@
     </div>
   </div>
 </footer>
+
 
 
 
