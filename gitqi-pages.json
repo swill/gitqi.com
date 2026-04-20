@@ -1,0 +1,34 @@
+{
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "GitQi — Get the key to your own website.",
+      "navLabel": "Home"
+    },
+    {
+      "file": "about.html",
+      "title": "About GitQi — Built across a kitchen table.",
+      "navLabel": "About"
+    },
+    {
+      "file": "get-key.html",
+      "title": "Get Key — Your step-by-step guide to owning your website.",
+      "navLabel": "Get Key"
+    },
+    {
+      "file": "git-qi.html",
+      "title": "Git Qi — The advanced path for those who own the whole stack.",
+      "navLabel": "Git Qi"
+    },
+    {
+      "file": "features.html",
+      "title": "GitQi Features — Every lever, switch, and shortcut.",
+      "navLabel": "Features"
+    },
+    {
+      "file": "donate.html",
+      "title": "Donate — GitQi",
+      "navLabel": "Donate"
+    }
+  ]
+}
