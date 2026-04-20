@@ -2,8 +2,8 @@
 <html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Donate — Webby</title>
-<meta name="description" content="Webby is free and open source forever. If it saved you time or money, fuel the project with a coffee, a kind word, or a contribution on GitHub.">
+<title>Donate — GitQi</title>
+<meta name="description" content="GitQi is free and open source forever. If it saved you time or money, fuel the project with a coffee, a kind word, or a contribution on GitHub.">
 
 
 
@@ -227,6 +227,22 @@
   .card h3 { margin-top: 0; margin-bottom: 0.4rem; }
   .card p { color: var(--color-text-muted); margin: 0; }
 
+  /* Path card (two-paths section) */
+  .path-card { background: var(--color-bg); border-radius: calc(var(--radius) * 1.2); padding: calc(var(--space-md) + 0.4rem); border: 1px solid var(--color-border); position: relative; overflow: hidden; transition: transform 0.28s ease, box-shadow 0.28s ease; display: flex; flex-direction: column; }
+  .path-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+  .path-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 6px; }
+  .path-card.get-key::before { background: linear-gradient(90deg, var(--color-accent), var(--color-accent-3)); }
+  .path-card.git-qi::before { background: linear-gradient(90deg, var(--color-accent-2), var(--color-secondary)); }
+  .path-mark { width: 68px; height: 68px; border-radius: 20px; display: grid; place-items: center; font-size: 2rem; margin-bottom: var(--space-sm); }
+  .path-card.get-key .path-mark { background: linear-gradient(135deg, var(--color-accent), var(--color-accent-3)); color: var(--color-primary); }
+  .path-card.git-qi .path-mark { background: linear-gradient(135deg, var(--color-accent-2), var(--color-secondary)); color: var(--color-bg); font-family: var(--font-heading); font-weight: 600; }
+  .path-label { display: inline-block; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; color: var(--color-secondary); margin-bottom: var(--space-xs); }
+  .path-card.get-key .path-label { color: #c05a1a; }
+  .path-card.git-qi .path-label { color: #0b8e87; }
+  .path-card h3 { font-size: clamp(1.4rem, 1.2vw + 0.9rem, 1.85rem); margin-top: 0; }
+  .path-card p { color: var(--color-text-muted); flex-grow: 1; }
+  .path-card .btn { margin-top: var(--space-sm); align-self: flex-start; }
+
   /* Testimonial */
   .testimonial { background: var(--color-bg); border-radius: var(--radius); padding: calc(var(--space-md) + 0.2rem); box-shadow: var(--shadow); position: relative; border-top: 6px solid var(--color-accent); }
   .testimonial.v2 { border-top-color: var(--color-accent-2); }
@@ -272,6 +288,8 @@
   .steps .step:nth-child(3) .step-num { background: var(--color-accent-2); color: var(--color-primary); }
   .steps .step:nth-child(4) .step-num { background: var(--color-accent-3); color: var(--color-primary); }
   .steps .step:nth-child(5) .step-num { background: var(--color-accent-4); }
+  .steps .step:nth-child(6) .step-num { background: var(--color-accent-5); }
+  .steps .step:nth-child(7) .step-num { background: var(--color-primary); color: var(--color-accent-3); }
   .step h3 { margin: 0 0 0.3rem; }
   .step p { margin: 0; color: var(--color-text-muted); }
   .section--dark .step h1, .section--dark .step h2, .section--dark .step h3 { color: var(--color-accent-5); }
@@ -301,6 +319,8 @@
   /* Inline note */
   .inline-note { display: flex; gap: 0.85rem; padding: 1rem 1.15rem; background: rgba(45,212,191,0.12); border-left: 4px solid var(--color-accent-2); border-radius: 10px; color: var(--color-text); font-size: 0.95rem; margin-top: var(--space-sm); }
   .inline-note.warn { background: rgba(255,140,60,0.12); border-left-color: var(--color-accent); }
+  .inline-note.lock { background: rgba(26,27,58,0.06); border-left-color: var(--color-primary); }
+  .inline-note.win { background: rgba(253,224,71,0.22); border-left-color: var(--color-accent-3); }
   .inline-note .inline-icon { font-size: 1.2rem; flex-shrink: 0; line-height: 1.2; }
 
   /* Donate cards */
@@ -351,8 +371,8 @@
 <nav class="site-nav" style="">
   <div class="nav-inner">
     <a href="./index.html" class="nav-brand">
-      <span class="nav-logo" aria-hidden="true">W</span>
-      <span>Webby</span>
+      <span class="nav-logo" aria-hidden="true">G</span>
+      <span>GitQi</span>
     </a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -360,9 +380,10 @@
     <ul class="nav-menu">
       <li><a href="./index.html">Home</a></li>
       <li><a href="./about.html">About</a></li>
-      <li><a href="./getting-started.html">Getting Started</a></li>
-      <li><a href="./features-and-editing.html">Features &amp; Editing</a></li>
-      <li><a href="./donate.html" class="active">Donate</a></li>
+      <li><a href="./get-key.html">Get Key</a></li>
+      <li><a href="./git-qi.html">Git Qi</a></li>
+      <li><a href="./features.html">Features</a></li>
+      <li><a href="./donate.html">Donate</a></li>
     </ul>
   </div>
   <script>
@@ -387,7 +408,7 @@
   <div class="container hero-inner">
     <span class="hero-badge" data-editable=""><span class="dot"></span>Donate</span>
     <h1 data-editable="">Fueled by <span class="accent-word">coffee</span> and <span class="accent-word teal">kindness</span>.</h1>
-    <p class="hero-subtitle" data-editable="">Webby is free, open source, and will stay that way. If it saved you a weekend, a design fee, or a monthly CMS bill, a small gesture back keeps the lights on and the roadmap moving.</p>
+    <p class="hero-subtitle" data-editable="">GitQi is free, open source, and will stay that way. If it saved you a weekend, a design fee, or a monthly CMS bill, a small gesture back keeps the lights on and the roadmap moving.</p>
   </div>
 </section>
 
@@ -397,11 +418,11 @@
       <div>
         <span class="feature-chip chip-pink" data-editable="">Free forever</span>
         <h2 data-editable="">Open source, <span class="accent-word magenta">enabling your creativity</span>.</h2>
-        <p data-editable="">Everything in Webby — the editor runtime, the bootstrap prompt, the docs, the years of taste that went into shaping each interaction — is released under the MIT license. You can read every line, fork it, adapt it, and ship it in your own work.</p>
+        <p data-editable="">Everything in GitQi — the editor runtime, the bootstrap prompt, the docs, the years of taste that went into shaping each interaction — is released under the MIT license. You can read every line, fork it, adapt it, and ship it in your own work.</p>
         <p data-editable="">This project exists because the web is too good to be hoarded behind subscription fees. If you're building a site for your practice, your art, your small studio, or your community group, you deserve elegant tools that don't charge you rent.</p>
         <div class="hero-actions">
-          <a href="https://github.com/swill/webby/" class="btn btn-dark" data-editable="" target="_blank" rel="noopener noreferrer">Browse the source <span class="arrow">→</span></a>
-          <a href="https://github.com/swill/webby/issues" class="btn btn-ghost" data-editable="" target="_blank" rel="noopener noreferrer">Report an issue</a>
+          <a href="https://github.com/swill/gitqi/" class="btn btn-dark" data-editable="" target="_blank" rel="noopener noreferrer">Browse the source <span class="arrow">→</span></a>
+          <a href="https://github.com/swill/gitqi/issues" class="btn btn-ghost" data-editable="" target="_blank" rel="noopener noreferrer">Report an issue</a>
         </div>
       </div>
       <div class="about-image">
@@ -416,13 +437,13 @@
     <div class="section-head">
       <span class="section-eyebrow" data-editable="">Free services</span>
       <h2 data-editable="">Designed to get you set up for <span class="accent-word magenta">zero dollars</span>.</h2>
-      <p class="section-lead" data-editable="">Webby is engineered around services with generous free tiers so you can run a real, public, professional website for the price of your broadband bill.</p>
+      <p class="section-lead" data-editable="">GitQi is engineered around services with generous free tiers so you can run a real, public, professional website for the price of your broadband bill.</p>
     </div>
     <div class="grid-3">
       <div class="donate-card v1">
         <span class="emoji" aria-hidden="true">🎨</span>
         <h3 data-editable="">Gemini API — free</h3>
-        <p data-editable="">Grab a free API key at <a href="https://aistudio.google.com/api-keys" target="_blank" rel="noopener noreferrer">aistudio.google.com</a>. No billing required for the tier Webby uses.</p>
+        <p data-editable="">Grab a free API key at <a href="https://aistudio.google.com/api-keys" target="_blank" rel="noopener noreferrer">aistudio.google.com</a>. No billing required for the tier GitQi uses.</p>
       </div>
       <div class="donate-card v2">
         <span class="emoji" aria-hidden="true">📦</span>
@@ -447,16 +468,16 @@
     <div class="cta-banner">
       <span class="section-eyebrow" data-editable="">Support the project</span>
       <h2 data-editable="">Fueled by <span class="accent-word yellow">coffee</span> and kudos.</h2>
-      <p data-editable="">If Webby saved you time, money, or the dignity of not learning webpack — a small contribution means a lot. It pays for the domain, the time on the weekends, and a small tower of espresso shots.</p>
+      <p data-editable="">If GitQi saved you time, money, or the dignity of not learning webpack — a small contribution means a lot. It pays for the domain, the time on the weekends, and a small tower of espresso shots.</p>
       <div class="hero-actions" style="justify-content: center;">
         <a href="https://www.paypal.me/swillkb/10usd" class="btn btn-dark" data-editable="" target="_blank" rel="noopener noreferrer">☕ Buy me a coffee</a>
-        <a href="https://github.com/swill/webby/stargazers" class="btn btn-ghost on-dark" data-editable="" target="_blank" rel="noopener noreferrer">⭐ Star the repo</a>
+        <a href="https://github.com/swill/gitqi/stargazers" class="btn btn-ghost on-dark" data-editable="" target="_blank" rel="noopener noreferrer">⭐ Star the repo</a>
       </div>
     </div>
     <div class="grid-3 mt-lg">
       <div class="testimonial">
         <span class="quote-mark" aria-hidden="true">"</span>
-        <blockquote data-editable="">Placeholder: If a tool saves me four hours in a week, it's paid for itself. Webby saves me that on a Monday.</blockquote>
+        <blockquote data-editable="">Placeholder: If a tool saves me four hours in a week, it's paid for itself. GitQi saves me that on a Monday.</blockquote>
         <cite>
           <strong data-editable="">A happy sponsor</strong>
           <span data-editable="">Freelance designer</span>
@@ -487,12 +508,12 @@
     <div class="footer-top">
       <div>
         <a href="./index.html" class="footer-brand">
-          <span class="nav-logo" aria-hidden="true">W</span>
-          <span>Webby</span>
+          <span class="nav-logo" aria-hidden="true">G</span>
+          <span>GitQi</span>
         </a>
         <p class="footer-tagline" data-editable="">A zero-dependency, AI-enabled inline editor for static websites. Free, open source, and delightfully opinionated.</p>
         <div class="footer-socials">
-          <a href="https://github.com/swill/webby/" aria-label="GitHub repository" data-editable="" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/swill/gitqi/" aria-label="GitHub repository" data-editable="" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.83 1.18 3.09 0 4.43-2.7 5.4-5.26 5.69.41.35.78 1.05.78 2.12v3.14c0 .31.21.68.8.56C20.21 21.38 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"></path></svg>
           </a>
           <a href="https://github.com/swill" aria-label="Author on GitHub" data-editable="" target="_blank" rel="noopener noreferrer">
@@ -504,27 +525,29 @@
         <p class="footer-heading" data-editable="">Explore</p>
         <ul class="footer-links">
           <li><a href="./about.html" data-editable="">About the project</a></li>
-          <li><a href="./getting-started.html" data-editable="">Getting started</a></li>
-          <li><a href="./features-and-editing.html" data-editable="">Features &amp; editing</a></li>
+          <li><a href="./get-key.html" data-editable="">Get Key guide</a></li>
+          <li><a href="./git-qi.html" data-editable="">Git Qi (advanced)</a></li>
+          <li><a href="./features.html" data-editable="">Features &amp; editing</a></li>
           <li><a href="./donate.html" data-editable="">Donate</a></li>
         </ul>
       </div>
       <div>
         <p class="footer-heading" data-editable="">Resources</p>
         <ul class="footer-links">
-          <li><a href="https://github.com/swill/webby/" data-editable="" target="_blank" rel="noopener noreferrer">Source on GitHub</a></li>
-          <li><a href="https://github.com/swill/webby/blob/main/README.md" data-editable="" target="_blank" rel="noopener noreferrer">Documentation</a></li>
+          <li><a href="https://github.com/swill/gitqi/" data-editable="" target="_blank" rel="noopener noreferrer">Source on GitHub</a></li>
+          <li><a href="https://github.com/swill/gitqi/blob/main/README.md" data-editable="" target="_blank" rel="noopener noreferrer">Documentation (README)</a></li>
           <li><a href="https://aistudio.google.com" data-editable="" target="_blank" rel="noopener noreferrer">Free Gemini API key</a></li>
           <li><a href="https://pages.github.com/" data-editable="" target="_blank" rel="noopener noreferrer">GitHub Pages</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span data-editable="">© 2026 Webby · Crafted with care by <a href="https://github.com/swill" target="_blank" rel="noopener noreferrer">@swill</a>.</span>
-      <span data-editable="">MIT licensed. Forever free.</span>
+      <span data-editable="">© 2026 GitQi · Crafted with care by <a href="https://github.com/swill" target="_blank" rel="noopener noreferrer">@swill</a> · MIT licensed · Forever free.</span>
     </div>
   </div>
 </footer>
+
+
 
 
 
