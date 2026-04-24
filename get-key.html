@@ -547,7 +547,7 @@
       <div class="card">
         <div class="card-icon teal" data-editable="">💾</div>
         <h3 data-editable="">A free GitHub account</h3>
-        <p data-editable="">Where your site's files live and from which GitHub Pages serves your website, for free, forever. <span style="font-style: italic; color: var(--color-accent-4);">Setup below</span><em>.</em><br>Your website:<em> <code>&lt;user&gt;.github.io/&lt;site&gt;</code> (can customize)</em></p>
+        <p data-editable="">Where your site's files live and from which GitHub Pages serves your website, for free, forever. <span style="font-style: italic; color: var(--color-accent-4);">Setup below</span><em>.</em><br>Your website:<em> <code>&lt;username&gt;.github.io/&lt;site&gt;</code> (can customize)</em></p>
       </div>
       <div class="card">
         <div class="card-icon yellow" data-editable="">✨</div>
@@ -632,7 +632,7 @@
         <li data-editable="">Scroll to the bottom of the left sidebar → <strong>Developer settings</strong>.</li>
         <li data-editable="">Click <strong>Personal access tokens</strong> → <strong>Fine-grained tokens</strong>.</li>
         <li data-editable="">Click <strong>Generate new token</strong>.</li>
-        <li data-editable="">Give it a name like <code>gitqi-my-site</code> so future-you remembers what it's for.</li>
+        <li data-editable="">Give it a name like <code>gitqi-my-pro-site</code> so future-you remembers what it's for.</li>
         <li data-editable="">Set expiration to <em>Never expire</em>, or expire in 1 year (in which case you'll repeat this step once a year).</li>
         <li data-editable="">Under <strong>Repository access</strong>, choose <em>Only select repositories</em> and pick the repository you just created.</li>
         <li data-editable="">Under <strong>Permissions → Repository permissions</strong>, find <strong>Contents</strong> and add it, then set it to <em>Read and write</em>.</li>
@@ -712,8 +712,8 @@
       <p data-editable="">GitQi needs to know your GitHub token, your Gemini key, and which repository to publish to. Rather than asking you every time, it reads these values from a file called <code>secrets.js</code> that sits next to your HTML. This file is the only thing you configure. It never gets uploaded — GitQi is specifically designed to strip it out before publishing.</p>
       <h4 class="how" data-editable="">How to do it</h4>
       <ol>
-        <li data-editable="">Create a new folder on your desktop for your site (for example, <code>my-site/</code>). This is where <code>secrets.js</code> and your <code>index.html</code>&nbsp;(and any other html files) will live side by side.</li>
-        <li data-editable="">Open a plain-text editor (Notepad on Windows, TextEdit on Mac — on Mac, switch to plain-text mode under <em>Format → Make Plain Text</em>).</li>
+        <li data-editable="">Create a new folder on your desktop for your site (for example, <code>my-pro-site/</code>). This is where <code>secrets.js</code> and your <code>index.html</code>&nbsp;(and any other html files) will live side by side.</li>
+        <li data-editable="">Open a plain-text editor (Notepad on Windows, TextEdit on Mac — on Mac, switch to plain-text mode under <em><span style="color: var(--color-secondary);"><span style="color: var(--color-accent-5);">Format → Make Plain Text</span></span></em>).</li>
         <li data-editable="">Paste the following exactly:</li>
       </ol>
       <div class="code-block">
@@ -721,12 +721,12 @@
 <span class="k">window</span>.SITE_SECRETS = {
   geminiKey:   <span class="s">"AIza..."</span>,              <span class="c">// your Google AI key</span>
   githubToken: <span class="s">"ghp_..."</span>,              <span class="c">// your GitHub token</span>
-  repo:        <span class="s">"username/my-site"</span>,     <span class="c">// your GitHub username / repo name</span>
+  repo:        <span class="s">"username/my-pro-site"</span>, <span class="c">// your GitHub username / repo name</span>
   branch:      <span class="s">"main"</span>
 };</pre>
       </div>
       <ol start="4">
-        <li data-editable="">Replace the placeholder values with your actual Gemini key, GitHub token, and <code>username/repo-name</code>.</li>
+        <li data-editable="">Replace the placeholder values with your actual Gemini key, GitHub token, and <code>username/repository</code>.</li>
         <li data-editable="">Save the file as <code>secrets.js</code> in the folder you created.</li>
       </ol>
       <h4 class="done" data-editable="">Done when</h4>
@@ -788,13 +788,13 @@
       <p data-editable="">GitQi activates only when it finds <code>secrets.js</code> sitting next to your HTML file. This is how it stays local-first — there's nothing to configure in a dashboard, no server to talk to. Your folder is the whole setup.</p>
       <h4 class="how" data-editable="">How to do it</h4>
       <ol>
-        <li data-editable="">Move the <code>index.html</code> you just saved into the same folder that holds <code>secrets.js</code> (the folder you created in Setup, for example <code>my-site/</code>).</li>
+        <li data-editable="">Move the <code>index.html</code> you just saved into the same folder that holds <code>secrets.js</code> (the folder you created in Setup, for example <code>my-pro-site/</code>).</li>
         <li data-editable="">Make sure both files are at the same level — not in sub-folders, not zipped.</li>
       </ol>
       <h4 class="done" data-editable="">Done when</h4>
       <p data-editable="">Your folder looks like this:</p>
       <div class="code-block">
-<pre>my-site/
+<pre>my-pro-site/
 ├── <span class="p">index.html</span>
 └── <span class="p">secrets.js</span>    <span class="c">← stays on your machine, forever</span></pre>
       </div>
@@ -816,7 +816,7 @@
         <li data-editable="">Open <strong>Chrome</strong>, <strong>Edge</strong>, <strong>Brave</strong>, or another Chromium-based browser. Safari and Firefox don't yet support the File System Access API GitQi uses.</li>
         <li data-editable="">Drag your <code>index.html</code> file into a browser window — or use <em>File → Open File</em>, or right-click the file and choose <em>Open With</em>.</li>
         <li data-editable="">You'll see the GitQi toolbar appear at the top of the page.</li>
-        <li data-editable="">Click <strong>Select Folder</strong> in the toolbar and choose your <code>my-site/</code> folder. This links GitQi to your files so changes save automatically as you edit.</li>
+        <li data-editable="">Click <strong>Select Folder</strong> in the toolbar and choose your <code>my-pro-site/</code> folder. This links GitQi to your files so changes save automatically as you edit.</li>
       </ol>
       <h4 class="done" data-editable="">Done when</h4>
       <p data-editable="">The GitQi toolbar is visible at the top of the page and your folder is linked. You're now in edit mode.</p>
@@ -903,7 +903,7 @@
         <div class="guide-step-num guide-accent-2" aria-hidden="true">7</div>
         <div>
           <span class="section-eyebrow" data-editable="">Build · Publish &amp; live</span>
-          <h2 data-editable="">Publish and view at <span class="accent-word magenta">&lt;user&gt;.github.io/&lt;site&gt;</span>.</h2>
+          <h2 data-editable="">Publish and view it live.</h2>
           <p data-editable=""><strong>What you're doing:</strong> clicking <em>Publish</em>, which pushes your clean HTML to GitHub. GitHub Pages serves it as a live website.</p>
         </div>
       </div>
@@ -913,7 +913,7 @@
       <ol>
         <li data-editable="">In the GitQi toolbar, click <strong>Publish</strong>.</li>
         <li data-editable="">Wait for the "Published ✓" confirmation. The first publish takes a little longer because it creates <code>main</code> in your repo.</li>
-        <li data-editable="">Visit <code>https://&lt;user&gt;.github.io/&lt;site&gt;/</code>. The first deploy takes about a minute — refresh if it's not live yet.</li>
+        <li data-editable="">Visit <code>https://&lt;username&gt;.github.io/&lt;my-pro-site&gt;/</code>. The first deploy takes about a minute — refresh if it's not live yet.</li>
         <li data-editable="">For every future edit: click Publish, wait a few seconds, refresh.</li>
       </ol>
       <h4 class="done" data-editable="">Done when</h4>
@@ -1001,6 +1001,8 @@
     </div>
   </div>
 </footer>
+
+
 
 
 
