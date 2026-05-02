@@ -453,7 +453,7 @@
 /* Adjust margin for the first h4 inside a guide-step to ensure consistent spacing */
 .guide-step .guide-step-head + h4 {
   margin-top: var(--space-sm);
-}</style></head>
+}</style><style id="__gitqi-section-build-publish-2-styles">/* No additional CSS needed for this section as existing classes and variables are used. */</style></head>
 <body style="">
 <nav class="site-nav" style="">
   <div class="nav-inner">
@@ -922,7 +922,39 @@
         <span class="inline-icon">🔑</span>
         <span data-editable=""><strong>You're in.</strong> You have the key now. From here, everything is just editing. Open your local <code>index.html</code> in Chrome whenever you want to change something — click, type, click <em>Publish</em>.</span>
       </div>
+    </div><section data-zone="add-custom-domain" data-zone-label="Advanced · Custom Domain" id="add-custom-domain" style="position: relative;">
+  <div class="guide-step" style="position: relative;">
+    <div class="guide-step-head">
+      <div class="guide-step-num guide-accent-2" aria-hidden="true">8</div>
+      <div>
+        <span class="section-eyebrow" data-editable="">Advanced · Custom Domain (optional)</span>
+        <h2 data-editable="">Add a <span style="color: var(--color-accent);">custom domain</span>.</h2>
+        <p data-editable=""><strong>What you're doing:</strong> using your own domain (e.g. <code>my-pro-site.com</code>) instead of the free&nbsp;<code>username.github.io</code> URL.</p>
+      </div>
     </div>
+    <h4 class="why" data-editable="">Why it matters</h4>
+    <p data-editable="">Using a custom domain enhances your site's branding and professionalism, making it more memorable and potentially improving SEO.</p>
+    <h4 class="how" data-editable="">How to do it</h4>
+    <ol>
+      <li data-editable=""><strong>Add <code>CNAME</code> file:</strong> Create a file named <code>CNAME</code> (no extension) in your <code>src</code> folder. This file should contain only your domain name (e.g., <code>my-pro-site.com</code>). If you want <code>www.<span style="font-size: 15.64px;">my-pro-site</span>.com</code>, put <code>www.<span style="font-size: 15.64px;">my-pro-site</span>.com</code> in it.</li>
+      <li data-editable=""><strong>Publish:</strong> Click the <strong>Publish</strong> button in GitQi. This will push your site, including the <code>CNAME</code> file, to GitHub Pages.</li>
+      <li data-editable=""><strong>Configure DNS (Registrar):</strong> Go to your domain registrar (e.g., GoDaddy, Namecheap, Cloudflare, etc.) and configure your DNS settings:
+        <ul>
+          <li data-editable=""><strong>Apex Domain (<code><span style="font-size: 15.64px;">my-pro-site</span>.com</code>):</strong> Create an <code>A</code> record pointing to GitHub Pages IP addresses: <code>185.199.108.153</code>, <code>185.199.109.153</code>, <code>185.199.110.153</code>, <code>185.199.111.153</code>.</li>
+          <li data-editable=""><strong><code>www</code> Subdomain (<code>www.<strong style="color: rgb(90, 93, 122); font-family: Inter, -apple-system, BlinkMacSystemFont, system-ui, sans-serif; font-size: 17px; background-color: rgb(253, 251, 245);"><code><span style="font-size: 15.64px;">my-pro-site</span></code></strong>.com</code>):</strong> Create a <code>CNAME</code> record pointing <code>www</code> to <code>&lt;username&gt;.github.io</code> (e.g., <code>swill.github.io</code>).</li>
+          <li data-editable=""><em>Note: It might take some time for DNS changes to propagate globally (up to 48 hours, though often faster).</em></li>
+        </ul>
+      </li>
+      <li data-editable=""><strong>Enforce HTTPS (GitHub Pages):</strong> After DNS propagation, go to your GitHub repository settings, navigate to the <em>Pages</em> section, and check <em><b>Enforce HTTPS</b></em>. This ensures your site is served securely. <em>Important: This option will only appear once your DNS records have successfully propagated and GitHub has recognized your custom domain.</em></li>
+    </ol>
+    <h4 class="done" data-editable="">Done when</h4>
+    <p data-editable="">Your site loads at your custom domain (e.g., <code>https://<span style="font-size: 15.64px;">my-pro-site</span>.com</code> or <code>https://www.<span style="font-size: 15.64px;">my-pro-site</span>.com</code>). 🚀</p>
+    <div class="inline-note warn">
+      <span class="inline-icon" data-editable="">⚠️</span>
+      <span data-editable=""><strong>Heads up:</strong> DNS changes can take time to propagate, so your custom domain might not be live instantly. Be patient and keep an eye on your GitHub Pages settings for the 'Enforce HTTPS' option.</span>
+    </div>
+  </div>
+</section>
 
   </div>
 </section>
