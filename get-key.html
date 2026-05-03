@@ -7,7 +7,7 @@
 
 
 
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster:wght@400&amp;display=swap"><style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lacquer:wght@400&amp;display=swap"><style>
   *, *::before, *::after { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
 
@@ -36,7 +36,7 @@
     --container-width: 1200px;
     --radius: 18px;
     --shadow: 0 24px 60px -24px rgba(26, 27, 58, 0.28);
-    --font-funky: 'Lobster', system-ui, sans-serif;
+    --font-funky: 'Lacquer', system-ui, sans-serif;
   --color-accent-5: #42468e;
 }
 
@@ -261,11 +261,16 @@
   .feature-media { position: relative; isolation: isolate; }
   .feature-media img { border-radius: var(--radius); width: 100%; aspect-ratio: 5/4; object-fit: cover; box-shadow: var(--shadow); position: relative; z-index: 1; }
   .feature-media::before { content:""; position: absolute; border-radius: var(--radius); z-index: 0; }
-  .feature-media.frame-orange::before { inset: -0.9rem auto auto -0.9rem; width: 55%; height: 60%; background: var(--color-accent); transform: rotate(-3deg); }
-  .feature-media.frame-teal::before { inset: auto -0.9rem -0.9rem auto; width: 55%; height: 60%; background: var(--color-accent-2); transform: rotate(5deg); }
-  .feature-media.frame-pink::before { inset: -0.9rem -0.9rem auto auto; width: 48%; height: 55%; background: var(--color-accent-4); transform: rotate(4deg); }
-  .feature-media.frame-yellow::before { inset: auto auto -0.9rem -0.9rem; width: 55%; height: 55%; background: var(--color-accent-3); transform: rotate(-4deg); }
-  .feature-media.frame-magenta::before { inset: -0.9rem auto auto -0.9rem; width: 55%; height: 55%; background: var(--color-secondary); transform: rotate(-5deg); }
+  .feature-media.frame-orange::before { inset: -0.9rem auto auto -0.9rem; width: 55%; height: 60%; background: var(--color-accent); transform: rotate(-3deg); }/*top-left*/
+  .feature-media.frame-orange-alt::before { inset: -0.9rem -0.9rem auto auto; width: 55%; height: 60%; background: var(--color-accent); transform: rotate(3deg); }/*top-right*/
+  .feature-media.frame-teal::before { inset: auto -0.9rem -0.9rem auto; width: 55%; height: 60%; background: var(--color-accent-2); transform: rotate(5deg); }/*bottom-right*/
+  .feature-media.frame-teal-alt::before { inset: auto auto -0.9rem -0.9rem; width: 55%; height: 60%; background: var(--color-accent-2); transform: rotate(-5deg); }/*bottom-left*/
+  .feature-media.frame-pink::before { inset: -0.9rem -0.9rem auto auto; width: 48%; height: 55%; background: var(--color-accent-4); transform: rotate(4deg); }/*top-right*/
+  .feature-media.frame-pink-alt::before { inset: -0.9rem auto auto -0.9rem; width: 48%; height: 55%; background: var(--color-accent-4); transform: rotate(-4deg); }/*top-left*/
+  .feature-media.frame-yellow::before { inset: auto auto -0.9rem -0.9rem; width: 55%; height: 55%; background: var(--color-accent-3); transform: rotate(-4deg); }/*bottom-left*/
+  .feature-media.frame-yellow-alt::before { inset: auto -0.9rem -0.9rem auto; width: 55%; height: 55%; background: var(--color-accent-3); transform: rotate(4deg); }/*bottom-right*/
+  .feature-media.frame-magenta::before { inset: -0.9rem auto auto -0.9rem; width: 55%; height: 55%; background: var(--color-secondary); transform: rotate(-4deg); }/*top-left*/
+  .feature-media.frame-magenta-alt::before { inset: -0.9rem -0.9rem auto auto; width: 55%; height: 55%; background: var(--color-secondary); transform: rotate(4deg); }/*top-right*/
 
   .feature-chip { display: inline-block; padding: 0.38rem 0.82rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 999px; margin-bottom: var(--space-sm); }
   .chip-orange { background: rgba(255,140,60,0.16); color: #c05a1a; }
@@ -283,13 +288,13 @@
   .step { display: grid; grid-template-columns: 76px 1fr; gap: var(--space-md); align-items: start; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius); padding: calc(var(--space-md) - 0.1rem); transition: transform 0.22s ease, box-shadow 0.22s ease; }
   .step:hover { transform: translateX(4px); box-shadow: var(--shadow); }
   .step-num { width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center; font-family: var(--font-heading); font-size: 1.65rem; color: white; background: var(--color-primary); font-weight: 600; font-variation-settings: 'opsz' 144; }
-  .steps .step:nth-child(1) .step-num, .step-accent { background: var(--color-accent); color: var(--color-primary); }
-  .steps .step:nth-child(2) .step-num, .step-secondary { background: var(--color-secondary); }
-  .steps .step:nth-child(3) .step-num, .step-accent-2 { background: var(--color-accent-2); color: var(--color-primary); }
-  .steps .step:nth-child(4) .step-num, .step-accent-3 { background: var(--color-accent-3); color: var(--color-primary); }
-  .steps .step:nth-child(5) .step-num, .step-accent-4 { background: var(--color-accent-4); }
-  .steps .step:nth-child(6) .step-num, .step-accent-5 { background: var(--color-accent-5); }
-  .steps .step:nth-child(7) .step-num, .step-primary { background: var(--color-primary); color: var(--color-accent-3); }
+  .steps .step:nth-child(1) .step-num { background: var(--color-accent); color: var(--color-primary); }
+  .steps .step:nth-child(2) .step-num { background: var(--color-secondary); }
+  .steps .step:nth-child(3) .step-num { background: var(--color-accent-2); color: var(--color-primary); }
+  .steps .step:nth-child(4) .step-num { background: var(--color-accent-3); color: var(--color-primary); }
+  .steps .step:nth-child(5) .step-num { background: var(--color-accent-4); }
+  .steps .step:nth-child(6) .step-num { background: var(--color-accent-5); }
+  .steps .step:nth-child(7) .step-num { background: var(--color-primary); color: var(--color-accent-3); }
   .step h3 { margin: 0 0 0.3rem; }
   .step p { margin: 0; color: var(--color-text-muted); }
   .section--dark .step h1, .section--dark .step h2, .section--dark .step h3 { color: var(--color-accent-5); }
@@ -380,13 +385,13 @@
   .guide-step:last-child { margin-bottom: 0; }
   .guide-step-head { display: grid; grid-template-columns: 80px 1fr; gap: var(--space-md); align-items: start; margin-bottom: var(--space-sm); }
   .guide-step-num { width: 72px; height: 72px; border-radius: 20px; display: grid; place-items: center; font-family: var(--font-heading); font-size: 2rem; color: var(--color-accent-3); background: var(--color-primary); font-weight: 600; font-variation-settings: 'opsz' 144; line-height: 1; }
-  .guide-accent { background: var(--color-accent); color: var(--color-primary); }
-  .guide-secondary { background: var(--color-secondary); }
-  .guide-accent-4 { background: var(--color-accent-4); }
-  .guide-accent-3 { background: var(--color-accent-3); color: var(--color-primary); }
-  .guide-accent-2 { background: var(--color-accent-2); color: var(--color-primary); }
-  .guide-accent-5 { background: var(--color-accent-5); }
-  .guide-primary { background: var(--color-primary); color: var(--color-accent-3); }
+  /*.guide-step:nth-of-type(1) .guide-step-num { background: var(--color-accent); color: var(--color-primary); }
+  .guide-step:nth-of-type(2) .guide-step-num { background: var(--color-secondary); }
+  .guide-step:nth-of-type(3) .guide-step-num { background: var(--color-accent-4); }
+  .guide-step:nth-of-type(4) .guide-step-num { background: var(--color-accent-3); color: var(--color-primary); }
+  .guide-step:nth-of-type(5) .guide-step-num { background: var(--color-accent-2); color: var(--color-primary); }
+  .guide-step:nth-of-type(6) .guide-step-num { background: var(--color-accent-5); }
+  .guide-step:nth-of-type(7) .guide-step-num { background: var(--color-primary); color: var(--color-accent-3); }*/
   .guide-step-head h2 { margin: 0.15rem 0 0.4rem; font-size: clamp(1.45rem, 1.6vw + 0.9rem, 2.05rem); }
   .guide-step-head .section-eyebrow { margin-bottom: 0.2rem; }
   .guide-step-head p { color: var(--color-text-muted); margin: 0; }
