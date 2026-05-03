@@ -5,7 +5,7 @@
 <title>Features &amp; Editing — GitQi</title>
 <meta name="description" content="Every GitQi feature at a glance — inline text editing, image swap, AI section generator, multi-page sync, theme controls, one-click publishing, and more.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster:wght@400&amp;display=swap"><style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><style>
   *, *::before, *::after { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
 
@@ -34,7 +34,7 @@
     --container-width: 1200px;
     --radius: 18px;
     --shadow: 0 24px 60px -24px rgba(26, 27, 58, 0.28);
-    --font-funky: 'Lobster', system-ui, sans-serif;
+    --font-funky: 'Lacquer', system-ui, sans-serif;
   --color-accent-5: #42468e;
 }
 
@@ -259,11 +259,16 @@
   .feature-media { position: relative; isolation: isolate; }
   .feature-media img { border-radius: var(--radius); width: 100%; aspect-ratio: 5/4; object-fit: cover; box-shadow: var(--shadow); position: relative; z-index: 1; }
   .feature-media::before { content:""; position: absolute; border-radius: var(--radius); z-index: 0; }
-  .feature-media.frame-orange::before { inset: -0.9rem auto auto -0.9rem; width: 55%; height: 60%; background: var(--color-accent); transform: rotate(-3deg); }
-  .feature-media.frame-teal::before { inset: auto -0.9rem -0.9rem auto; width: 55%; height: 60%; background: var(--color-accent-2); transform: rotate(5deg); }
-  .feature-media.frame-pink::before { inset: -0.9rem -0.9rem auto auto; width: 48%; height: 55%; background: var(--color-accent-4); transform: rotate(4deg); }
-  .feature-media.frame-yellow::before { inset: auto auto -0.9rem -0.9rem; width: 55%; height: 55%; background: var(--color-accent-3); transform: rotate(-4deg); }
-  .feature-media.frame-magenta::before { inset: -0.9rem auto auto -0.9rem; width: 55%; height: 55%; background: var(--color-secondary); transform: rotate(-5deg); }
+  .feature-media.frame-orange::before { inset: -0.9rem auto auto -0.9rem; width: 55%; height: 60%; background: var(--color-accent); transform: rotate(-3deg); }/*top-left*/
+  .feature-media.frame-orange-alt::before { inset: -0.9rem -0.9rem auto auto; width: 55%; height: 60%; background: var(--color-accent); transform: rotate(3deg); }/*top-right*/
+  .feature-media.frame-teal::before { inset: auto -0.9rem -0.9rem auto; width: 55%; height: 60%; background: var(--color-accent-2); transform: rotate(5deg); }/*bottom-right*/
+  .feature-media.frame-teal-alt::before { inset: auto auto -0.9rem -0.9rem; width: 55%; height: 60%; background: var(--color-accent-2); transform: rotate(-5deg); }/*bottom-left*/
+  .feature-media.frame-pink::before { inset: -0.9rem -0.9rem auto auto; width: 48%; height: 55%; background: var(--color-accent-4); transform: rotate(4deg); }/*top-right*/
+  .feature-media.frame-pink-alt::before { inset: -0.9rem auto auto -0.9rem; width: 48%; height: 55%; background: var(--color-accent-4); transform: rotate(-4deg); }/*top-left*/
+  .feature-media.frame-yellow::before { inset: auto auto -0.9rem -0.9rem; width: 55%; height: 55%; background: var(--color-accent-3); transform: rotate(-4deg); }/*bottom-left*/
+  .feature-media.frame-yellow-alt::before { inset: auto -0.9rem -0.9rem auto; width: 55%; height: 55%; background: var(--color-accent-3); transform: rotate(4deg); }/*bottom-right*/
+  .feature-media.frame-magenta::before { inset: -0.9rem auto auto -0.9rem; width: 55%; height: 55%; background: var(--color-secondary); transform: rotate(-4deg); }/*top-left*/
+  .feature-media.frame-magenta-alt::before { inset: -0.9rem -0.9rem auto auto; width: 55%; height: 55%; background: var(--color-secondary); transform: rotate(4deg); }/*top-right*/
 
   .feature-chip { display: inline-block; padding: 0.38rem 0.82rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 999px; margin-bottom: var(--space-sm); }
   .chip-orange { background: rgba(255,140,60,0.16); color: #c05a1a; }
@@ -437,7 +442,7 @@
 </style>
 
 
-<link rel="icon" type="image/png" href="./assets/favicon.png"><link rel="apple-touch-icon" href="./assets/favicon.png"><meta name="keywords" content="features, editing, prompt, usage, showcase"></head>
+<link rel="icon" type="image/png" href="./assets/favicon.png"><link rel="apple-touch-icon" href="./assets/favicon.png"><meta name="keywords" content="features, editing, prompt, usage, showcase"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lacquer:wght@400&amp;display=swap"></head>
 <body style="">
 <nav class="site-nav" style="">
   <div class="nav-inner">
@@ -546,21 +551,39 @@
     </div>
   </div>
 </section>
-<section class="section section--cream" data-zone="feature-preview-1" data-zone-label="Feature Preview 1" id="feature-preview-1" style="padding: var(--space-lg) 0;">
+<section class="section section--cream" data-zone="feature-preview-7" data-zone-label="Feature Preview 7s" id="feature-preview-7" style="padding: var(--space-lg) 0;">
+  <div class="container">
+    <div class="feature-row">
+      <div class="feature-media frame-pink-alt">
+        <img src="./assets/editor.png" data-editable-image="" alt="Screenshot showing the AI add-section popup" style="cursor: pointer;">
+      </div>
+      <div class="feature-text">
+        <span class="feature-chip chip-pink" data-editable="">Text Editing</span>
+        <h3 data-editable="">Edit any <em><span style="font-family: var(--font-funky);"><span style="font-family: var(--font-funky);">text</span></span></em> by clicking on it</h3>
+        <p data-editable="">Clicking on text makes it editable.&nbsp; You just type and the content is saved to your computer in the HTML file.&nbsp; When editing, you can use CTRL+Z to undo and CTRL+SHIFT+Z to redo.&nbsp; If you select text, a styling editor shows to style the highlighted text.</p>
+        <ul>
+          <li data-editable="">Edit content in place right in your editor.</li>
+          <li data-editable="">Select text to modify its styling, including font, color, size, etc.</li>
+          <li data-editable="">All fonts and colors defined in the Theme are available styles.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section><section class="section section--cream" data-zone="feature-preview-1" data-zone-label="Feature Preview 1" id="feature-preview-1" style="padding: var(--space-lg) 0;">
   <div class="container">
     <div class="feature-row">
       <div class="feature-text">
-        <span class="feature-chip chip-orange" data-editable="">01 · Text &amp; links</span>
-        <h3 data-editable="">Click, type, and format — all in place.</h3>
-        <p data-editable="">Every editable element becomes <code>contenteditable</code> when the editor is active. Typing feels native. Selecting text reveals a floating toolbar with Bold, Italic, Color, Font, Font&nbsp;Size, Code, and a Smart Link editor that lets you pick any page or anchor on your site.</p>
+        <span class="feature-chip chip-orange" data-editable="">LinK Editing</span>
+        <h3 data-editable="">Edit any <em><span style="font-family: var(--font-funky);">link</span></em> by clicking on it</h3>
+        <p data-editable="">When clicking on a link, you are presented a smart link editing tool. You can go to that link with the button in the top right.&nbsp; If you type an external URL, it will default to opening in a new tab.&nbsp; Type <code>mailto:</code> in the URL and you are presented with an email template.</p>
         <ul>
-          <li data-editable="">Ctrl+Z uses the browser's native undo for text.</li>
-          <li data-editable="">Link popovers include a <em>Go to link →</em> preview.</li>
-          <li data-editable="">Nav links and body links share the same editor.</li>
+          <li data-editable="">Edit the details of the link, with easy previewing.</li>
+          <li data-editable=""><em>Jump to</em> allows you to pick any page or section on the site.</li>
+          <li data-editable="">Advanced options like <code>mailto:</code> support with email obfuscation.</li>
         </ul>
       </div>
       <div class="feature-media frame-orange">
-        <img src="./assets/Screenshot-2026-04-21-22-10-25.png" data-editable-image="" alt="Screenshot showing the inline text editing toolbar" style="cursor: pointer;">
+        <img src="./assets/link.png" data-editable-image="" alt="Screenshot showing the inline text editing toolbar" style="cursor: pointer;">
       </div>
     </div>
   </div>
@@ -572,7 +595,7 @@
         <img src="./assets/Screenshot-2026-04-21-22-09-16.png" data-editable-image="" alt="Screenshot showing image swap in action" style="cursor: pointer;">
       </div>
       <div class="feature-text">
-        <span class="feature-chip chip-teal" data-editable="">02 · Images</span>
+        <span class="feature-chip chip-teal" data-editable="">Images</span>
         <h3 data-editable="">Swap images by clicking them.</h3>
         <p data-editable="">Click any editable image to open a file picker. GitQi writes the file into your local <code>assets/</code> folder, rewrites the <code>src</code>, and queues it for the next publish. No drag-and-drop anxiety, no hidden folders, no mystery.</p>
         <ul>
@@ -588,7 +611,7 @@
   <div class="container">
     <div class="feature-row">
       <div class="feature-text">
-        <span class="feature-chip chip-pink" data-editable="">03 · AI sections</span>
+        <span class="feature-chip chip-pink" data-editable="">AI sections</span>
         <h3 data-editable="">Generate or reformat sections with AI.</h3>
         <p data-editable="">Hover between two sections to reveal <em>+ Add Section</em>. Describe what you want — "a three-card features grid with icons" — and a themed section appears, matched to your palette and typography. Hover any existing section for <em>⟳ Reformat</em> to restructure it without losing content.</p>
         <ul>
@@ -610,12 +633,12 @@
         <img src="./assets/Screenshot-2026-04-21-22-13-35.png" data-editable-image="" alt="Screenshot showing multi-page manager" style="cursor: pointer;">
       </div>
       <div class="feature-text">
-        <span class="feature-chip chip-yellow" data-editable="">04 · Pages &amp; nav</span>
+        <span class="feature-chip chip-yellow" data-editable="">Pages &amp; nav</span>
         <h3 data-editable="">Multi-page sites, synced automatically.</h3>
         <p data-editable="">Click <em>Pages</em> in the toolbar to add a new AI-generated page, navigate between pages, or remove a page you no longer need. Whenever the nav changes — a reformat, a new page, a rename — the update is mirrored to every other page file on disk instantly.</p>
         <ul>
           <li data-editable="">Automatic <code>gitqi-pages.json</code> manifest.</li>
-          <li data-editable="">Nav edits sync without a manual rebuild.</li>
+          <li data-editable="">Nav and footer edits sync without a manual rebuild.</li>
           <li data-editable="">Page titles and meta descriptions are editable per page.</li>
         </ul>
       </div>
@@ -626,13 +649,13 @@
   <div class="container">
     <div class="feature-row">
       <div class="feature-text">
-        <span class="feature-chip chip-magenta" data-editable="">05 · Theme</span>
+        <span class="feature-chip chip-magenta" data-editable="">Theme</span>
         <h3 data-editable="">Palette, fonts, and spacing in one panel.</h3>
         <p data-editable="">Click <em>Theme</em> to open a live-editing panel for every visual token: primary and accent colors, heading and body fonts, spacing scale, border radius, and meta tags. Changes update the page in real time and apply across every file in your site.</p>
         <ul>
-          <li data-editable="">All tokens map to the <code>:root</code> CSS variables.</li>
+          <li data-editable="">All changes to the theme are synced across the pages.</li>
           <li data-editable="">Edit the favicon, page title, description, and keywords inline.</li>
-          <li data-editable="">Browse the full Google Fonts catalog (~1,900 families) with a live-preview picker, or add your own font variables.</li>
+          <li data-editable="">Google Fonts catalog (~1,900 families) with a live-preview picker, combined with a custom color picker allow for ultimate flexibility.<br></li>
         </ul>
       </div>
       <div class="feature-media frame-magenta">
@@ -648,7 +671,7 @@
         <img src="./assets/Screenshot-2026-04-21-22-20-10.png" data-editable-image="" alt="Screenshot showing the publish button and GitHub sync" style="cursor: pointer;">
       </div>
       <div class="feature-text">
-        <span class="feature-chip chip-orange" data-editable="">06 · Publish</span>
+        <span class="feature-chip chip-orange" data-editable="">Publish</span>
         <h3 data-editable="">One click. Clean HTML. Live site.</h3>
         <p data-editable="">Click <em>Publish</em> and GitQi serializes every page, strips the editor scripts and your credentials, then pushes the clean files straight to your GitHub repo via the Contents API. GitHub Pages picks up the changes and your site is updated in about sixty seconds.</p>
         <ul>
@@ -704,9 +727,6 @@
     </div>
   </div>
 </footer>
-
-
-
 
 
 
