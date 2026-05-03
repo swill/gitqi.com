@@ -439,7 +439,106 @@
 </style>
 
 
-<link rel="icon" type="image/png" href="./assets/favicon.png"><link rel="apple-touch-icon" href="./assets/favicon.png"><meta name="keywords" content="donate, support, sponsor"><style id="__gitqi-section-buy-me-a-coffee-styles"></style></head>
+<link rel="icon" type="image/png" href="./assets/favicon.png"><link rel="apple-touch-icon" href="./assets/favicon.png"><meta name="keywords" content="donate, support, sponsor"><style id="__gitqi-section-buy-me-a-coffee-styles"></style><style id="__gitqi-section-free-services-2-styles">.paid-service-offer {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-md); /* Add some space from the section head */
+}
+
+.paid-service-card {
+  background: var(--color-bg); /* Light background for contrast on dark section */
+  border-radius: var(--radius);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--color-border);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paid-service-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.paid-service-head .emoji {
+  font-size: 3.5rem;
+  margin-bottom: var(--space-xs);
+  line-height: 1;
+}
+
+.paid-service-card h3 {
+  font-size: clamp(1.6rem, 2vw + 0.5rem, 2.2rem);
+  margin: 0;
+  color: var(--color-primary);
+}
+
+.paid-service-card .price {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw + 1rem, 3.8rem);
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin: var(--space-sm) 0 var(--space-md);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.paid-service-card .features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-lg);
+  text-align: left;
+  width: 100%;
+  max-width: 380px; /* Adjust max-width for features list */
+}
+
+.paid-service-card .features li {
+  margin-bottom: var(--space-xs);
+  padding-left: var(--space-sm);
+  position: relative;
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+}
+
+.paid-service-card .features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent-2);
+  font-weight: 700;
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+.paid-service-card .btn {
+  width: auto;
+}
+
+@media (max-width: 600px) {
+  .paid-service-card {
+    padding: var(--space-md);
+  }
+  .paid-service-head .emoji {
+    font-size: 2.8rem;
+  }
+  .paid-service-card h3 {
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  }
+  .paid-service-card .price {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+  }
+  .paid-service-card .features li {
+    font-size: 1rem;
+  }
+  .paid-service-card .features {
+    max-width: 100%;
+  }
+}</style></head>
 <body style="">
 <nav class="site-nav" style="">
   <div class="nav-inner">
@@ -510,7 +609,7 @@
     <div class="cta-banner">
       <span class="section-eyebrow" data-editable="">Support the project</span>
       <h2 data-editable="">Fueled by <span class="accent-word yellow">coffee</span> and kudos.</h2>
-      <p data-editable="">If GitQi saved you time, money, or the dignity of not learning webpack — a small contribution means a lot. It pays for the domain, the time on the weekends, and the espresso fueled inspiration.</p>
+      <p data-editable="">If GitQi saved you time, money, or frustration — a small contribution means a lot. It pays for the domain, the time on the weekends, and the espresso fueled inspiration.</p>
       <div class="hero-actions" style="justify-content: center;">
         <a href="https://www.paypal.me/swillkb/10cad" class="btn btn-dark" data-editable="" target="_blank" rel="noopener noreferrer">☕ Buy me a coffee</a>
         <a href="https://github.com/swill/gitqi/stargazers" class="btn btn-ghost on-dark" data-editable="" target="_blank" rel="noopener noreferrer">⭐ Star the repo</a>
@@ -544,6 +643,44 @@
     <div class="inline-note mt-md">
       <span class="inline-icon">💚</span>
       <span data-editable="">If you'd rather use your own <a href="./get-key.html#add-custom-domain">custom domain</a>, that's the only step that might cost a few dollars a year from a domain registrar — and only if you choose to. GitHub Pages will happily serve <code>username.github.io/repo</code> forever, free.</span>
+    </div>
+  </div>
+</section><section class="section section--alt" data-zone="paid-services" data-zone-label="Paid Services" id="paid-services" style="">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-eyebrow" data-editable="">Consulting Services</span>
+      <h2 data-editable="">Get <span class="accent-word teal">Expert Guidance</span> for Your GitQi Setup</h2>
+      <p class="section-lead" data-editable="">Need a helping hand to get GitQi up and running smoothly? Book a personalized consulting session with me to ensure a perfect setup tailored to your needs and project requirements.</p>
+    </div>
+
+    <div class="grid-3 paid-services-grid">
+      <div class="card paid-service-card">
+        <div class="card-icon teal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3ZM5 19V5H19L19.0007 19H5ZM11 15H13V17H11V15ZM11 11H13V13H11V11ZM11 7H13V9H11V7Z"></path></svg>
+        </div>
+        <h3 data-editable="">Personalized Walkthrough</h3>
+        <p data-editable="">We'll connect via screen share, walking through your specific project setup and configuring GitQi together, step-by-step.</p>
+      </div>
+
+      <div class="card paid-service-card">
+        <div class="card-icon yellow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM13 7H11V13H13V7ZM11 15H13V17H11V15Z"></path></svg>
+        </div>
+        <h3 data-editable="">Efficient &amp; Focused</h3>
+        <p data-editable="">Sessions are charged by time, ensuring focused, efficient support to maximize your productivity and save you valuable hours.</p>
+      </div>
+
+      <div class="card paid-service-card">
+        <div class="card-icon orange">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path></svg>
+        </div>
+        <h3 data-editable="">Achieve Success Faster</h3>
+        <p data-editable="">From initial integration to advanced workflows, get immediate answers and achieve your GitQi goals without guesswork.</p>
+      </div>
+    </div>
+
+    <div class="center mt-lg">
+      <a href="javascript:void(0)" class="btn btn-primary" data-editable="" data-gqe="RDUlZW1hTkI1JUEwJUEwJUQ1JXR4ZXRub0NCNSVBMCVBMCVENSVzcnVvaEI1JStrb29iK290K2VraWwrZGx1b3crSSstQTAlRDUlc2VtaXRCNSUrdGErRDUlc3lhZEI1JStubytlbGJhbGlhdmErbWErSSstQTAlRDUlZW5vemVtaXRCNSUrbmkrbWErSSstQTAlQTMlc2xpYXRlZCtlbW9zK2VyYStlcmVoK0MyJW5vaXNzZXMrYStrb29iK290K2VraWwrZGx1b3crSUEwJUMyJWlIPXlkb2Imbm9pc3NlUythK2tvb0IrLStpUXRpRz10Y2VqYnVzP21vYy5saWFtZ0BzbmV2ZXRzbWFpbGxpdzpvdGxpYW0=">Book a Session </a>
     </div>
   </div>
 </section>
@@ -607,4 +744,4 @@
 
 
 
-</body></html>
+<script data-gqe-decoder="">(function(){var d=function(s){try{return decodeURIComponent(escape(atob(s))).split('').reverse().join('')}catch(e){return ''}};document.querySelectorAll('a[data-gqe]').forEach(function(a){a.setAttribute('href',d(a.getAttribute('data-gqe')));a.removeAttribute('data-gqe')});document.querySelectorAll('[data-gqt]').forEach(function(s){s.textContent=d(s.getAttribute('data-gqt'));s.removeAttribute('data-gqt')});})();</script></body></html>
