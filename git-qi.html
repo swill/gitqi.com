@@ -7,7 +7,7 @@
 
 
 
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster:wght@400&amp;display=swap"><style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lacquer:wght@400&amp;display=swap"><style>
   *, *::before, *::after { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
 
@@ -36,7 +36,7 @@
     --container-width: 1200px;
     --radius: 18px;
     --shadow: 0 24px 60px -24px rgba(26, 27, 58, 0.28);
-    --font-funky: 'Lobster', system-ui, sans-serif;
+    --font-funky: 'Lacquer', system-ui, sans-serif;
   --color-accent-5: #42468e;
 }
 
@@ -261,11 +261,16 @@
   .feature-media { position: relative; isolation: isolate; }
   .feature-media img { border-radius: var(--radius); width: 100%; aspect-ratio: 5/4; object-fit: cover; box-shadow: var(--shadow); position: relative; z-index: 1; }
   .feature-media::before { content:""; position: absolute; border-radius: var(--radius); z-index: 0; }
-  .feature-media.frame-orange::before { inset: -0.9rem auto auto -0.9rem; width: 55%; height: 60%; background: var(--color-accent); transform: rotate(-3deg); }
-  .feature-media.frame-teal::before { inset: auto -0.9rem -0.9rem auto; width: 55%; height: 60%; background: var(--color-accent-2); transform: rotate(5deg); }
-  .feature-media.frame-pink::before { inset: -0.9rem -0.9rem auto auto; width: 48%; height: 55%; background: var(--color-accent-4); transform: rotate(4deg); }
-  .feature-media.frame-yellow::before { inset: auto auto -0.9rem -0.9rem; width: 55%; height: 55%; background: var(--color-accent-3); transform: rotate(-4deg); }
-  .feature-media.frame-magenta::before { inset: -0.9rem auto auto -0.9rem; width: 55%; height: 55%; background: var(--color-secondary); transform: rotate(-5deg); }
+  .feature-media.frame-orange::before { inset: -0.9rem auto auto -0.9rem; width: 55%; height: 60%; background: var(--color-accent); transform: rotate(-3deg); }/*top-left*/
+  .feature-media.frame-orange-alt::before { inset: -0.9rem -0.9rem auto auto; width: 55%; height: 60%; background: var(--color-accent); transform: rotate(3deg); }/*top-right*/
+  .feature-media.frame-teal::before { inset: auto -0.9rem -0.9rem auto; width: 55%; height: 60%; background: var(--color-accent-2); transform: rotate(5deg); }/*bottom-right*/
+  .feature-media.frame-teal-alt::before { inset: auto auto -0.9rem -0.9rem; width: 55%; height: 60%; background: var(--color-accent-2); transform: rotate(-5deg); }/*bottom-left*/
+  .feature-media.frame-pink::before { inset: -0.9rem -0.9rem auto auto; width: 48%; height: 55%; background: var(--color-accent-4); transform: rotate(4deg); }/*top-right*/
+  .feature-media.frame-pink-alt::before { inset: -0.9rem auto auto -0.9rem; width: 48%; height: 55%; background: var(--color-accent-4); transform: rotate(-4deg); }/*top-left*/
+  .feature-media.frame-yellow::before { inset: auto auto -0.9rem -0.9rem; width: 55%; height: 55%; background: var(--color-accent-3); transform: rotate(-4deg); }/*bottom-left*/
+  .feature-media.frame-yellow-alt::before { inset: auto -0.9rem -0.9rem auto; width: 55%; height: 55%; background: var(--color-accent-3); transform: rotate(4deg); }/*bottom-right*/
+  .feature-media.frame-magenta::before { inset: -0.9rem auto auto -0.9rem; width: 55%; height: 55%; background: var(--color-secondary); transform: rotate(-4deg); }/*top-left*/
+  .feature-media.frame-magenta-alt::before { inset: -0.9rem -0.9rem auto auto; width: 55%; height: 55%; background: var(--color-secondary); transform: rotate(4deg); }/*top-right*/
 
   .feature-chip { display: inline-block; padding: 0.38rem 0.82rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 999px; margin-bottom: var(--space-sm); }
   .chip-orange { background: rgba(255,140,60,0.16); color: #c05a1a; }
@@ -655,7 +660,7 @@
   </div>
 </section>
 
-<section class="section section--alt" data-zone="cta" data-zone-label="CTA" id="cta">
+<section class="section section--alt" data-zone="cta" data-zone-label="CTA" id="cta" style="">
   <div class="container">
     <div class="cta-banner">
       <span class="section-eyebrow" data-editable="">Own the stack</span>
