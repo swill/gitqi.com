@@ -172,6 +172,10 @@
   .hero-sticker-2 { bottom: 2.5rem; right: -1.3rem; background: var(--color-secondary); color: white; transform: rotate(4deg); }
   .hero-sticker-3 { top: 45%; left: -1.6rem; background: var(--color-accent-2); color: var(--color-primary); transform: rotate(-3deg); }
 
+  .hero-media--small { max-width: 340px; width: 100%; margin-left: auto; }
+  .hero-media--small .hero-media-frame { aspect-ratio: 1/1; border-radius: calc(var(--radius) * 1.2); box-shadow: 0 28px 56px -18px rgba(0,0,0,0.5); }
+  @media (max-width: 920px) { .hero-media--small { margin: 0 auto; } }
+
   .hero-blob { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.55; pointer-events: none; }
 
   /* Stats row */
@@ -484,12 +488,21 @@
 
 <section class="hero hero--page" data-zone="hero" data-zone-label="Hero" id="hero" style="">
   <div class="container hero-inner">
-    <span class="hero-badge" data-editable=""><span class="dot"></span>The Git Qi path · 气</span>
-    <h1 data-editable="">You've got the <span style="color: var(--color-accent);">key</span>. <br>Now understand the <span class="accent-word teal">Qi</span>.</h1>
-    <p class="hero-subtitle" data-editable="">This is the advanced path. You've used GitQi and you want to know how it works, why it's built the way it is, and how to extend it. The source is yours to read.</p>
-    <div class="hero-actions">
-      <a href="https://github.com/swill/gitqi/" class="btn btn-primary" data-editable="" target="_blank" rel="noopener noreferrer">View source on GitHub <span class="arrow">→</span></a>
-      <a href="https://github.com/swill/gitqi/blob/main/README.md" class="btn btn-ghost on-dark" data-editable="" target="_blank" rel="noopener noreferrer">Read the README</a>
+    <div class="hero-split">
+      <div>
+        <span class="hero-badge" data-editable=""><span class="dot"></span>The Git Qi path · 气</span>
+        <h1 data-editable="">You've got the <span style="color: var(--color-accent);">key</span>. <br>Now for the <span class="accent-word teal">Qi</span>.</h1>
+        <p class="hero-subtitle" data-editable="">This is the advanced path. You've used GitQi and you want to know how it works, why it's built the way it is, and how to extend it. The source is yours to read.</p>
+        <div class="hero-actions">
+          <a href="https://github.com/swill/gitqi/" class="btn btn-primary" data-editable="" target="_blank" rel="noopener noreferrer">View source on GitHub <span class="arrow">→</span></a>
+          <a href="https://github.com/swill/gitqi/blob/main/README.md" class="btn btn-ghost on-dark" data-editable="" target="_blank" rel="noopener noreferrer">Read the README</a>
+        </div>
+      </div>
+      <div class="hero-media hero-media--small">
+        <div class="hero-media-frame">
+          <img src="./assets/close-up-colorful-bulls-face-black-background_1034058-106212.jpg" data-editable-image="" alt="A colorful illustration representing the GitQi project" style="cursor: pointer;">
+        </div>
+      </div>
     </div>
   </div>
 </section>
