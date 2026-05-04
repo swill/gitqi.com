@@ -88,6 +88,7 @@
   .nav-inner { max-width: var(--container-width); margin: 0 auto; padding: 0.85rem var(--space-md); display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); position: relative; }
   .nav-brand { display: flex; align-items: center; gap: 0.65rem; font-family: var(--font-heading); font-weight: 600; font-size: 1.3rem; color: var(--color-primary); text-decoration: none; }
   .nav-logo { width: 38px; height: 38px; border-radius: 11px; display: inline-flex; align-items: center; justify-content: center; color: var(--color-bg); font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-secondary) 50%, var(--color-accent-2) 100%); box-shadow: 0 10px 24px -10px rgba(217,70,239,0.5); }
+  .nav-logo img { width: 70%; height: 70%; filter: brightness(0) invert(1); }
   .nav-menu { display: flex; gap: 0.2rem; list-style: none; margin: 0; padding: 0; align-items: center; }
   .nav-menu a { font-weight: 500; font-size: 0.96rem; padding: 0.55rem 0.9rem; border-radius: 999px; color: var(--color-text); transition: background 0.2s ease, color 0.2s ease; display: inline-block; }
   .nav-menu a:hover { background: var(--color-bg-alt); color: var(--color-secondary); }
@@ -449,7 +450,7 @@
 <nav class="site-nav" style="">
   <div class="nav-inner">
     <a href="./index.html" class="nav-brand active">
-      <span class="nav-logo" aria-hidden="true">气</span>
+      <span class="nav-logo" aria-hidden="true"><img src="assets/qi-icon.svg" alt=""></span>
       <span>GitQi</span>
     </a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -555,7 +556,7 @@
         <a href="./get-key.html" class="btn btn-primary" data-editable="">Start here <span class="arrow">→</span></a>
       </div>
       <div class="path-card git-qi">
-        <div class="path-mark" aria-hidden="true">气</div>
+        <div class="path-mark" aria-hidden="true" style="position: relative;"><img src="assets/qi-icon.svg" alt="" style="width: 65%; height: 65%; filter: brightness(0) invert(1); cursor: pointer;"></div>
         <span class="path-label" data-editable="">Git Qi</span>
         <h3 data-editable="">I've got the key. Now the Qi.</h3>
         <p data-editable="">You've shipped a site. Now you understand the Qi of it — the Git backbone, the local-first philosophy, the open-source code you can read, fork, and extend. Welcome to the advanced path.</p>
@@ -659,7 +660,7 @@
     <div class="footer-top">
       <div>
         <a href="./index.html" class="footer-brand">
-          <span class="nav-logo" aria-hidden="true">气</span>
+          <span class="nav-logo" aria-hidden="true" style="position: relative;"><img src="assets/qi-icon.svg" alt="" style="cursor: pointer;"></span>
           <span>GitQi</span>
         </a>
         <p class="footer-tagline" data-editable="">A zero-dependency, AI-enabled inline editor for static websites. Free, open source, and delightfully opinionated.</p>
@@ -697,6 +698,8 @@
     </div>
   </div>
 </footer>
+
+
 
 
 
