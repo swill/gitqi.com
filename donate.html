@@ -173,6 +173,10 @@
   .hero-sticker-2 { bottom: 2.5rem; right: -1.3rem; background: var(--color-secondary); color: white; transform: rotate(4deg); }
   .hero-sticker-3 { top: 45%; left: -1.6rem; background: var(--color-accent-2); color: var(--color-primary); transform: rotate(-3deg); }
 
+  .hero-media--small { max-width: 340px; width: 100%; margin-left: auto; }
+  .hero-media--small .hero-media-frame { aspect-ratio: 1/1; border-radius: calc(var(--radius) * 1.2); box-shadow: 0 28px 56px -18px rgba(0,0,0,0.5); }
+  @media (max-width: 920px) { .hero-media--small { margin: 0 auto; } }
+
   .hero-blob { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.55; pointer-events: none; }
 
   /* Stats row */
@@ -584,9 +588,18 @@
 
 <section class="hero hero--page" data-zone="hero" data-zone-label="Hero" id="hero" style="">
   <div class="container hero-inner">
-    <span class="hero-badge" data-editable=""><span class="dot"></span>Donate</span>
-    <h1 data-editable="">Fueled by <span class="accent-word">coffee</span> and <span class="accent-word teal">kindness</span>.</h1>
-    <p class="hero-subtitle" data-editable="">GitQi is free, open source, and will stay that way. If it saved you a weekend, a design fee, or a monthly CMS bill, a small gesture back keeps the lights on and the roadmap moving.</p>
+    <div class="hero-split">
+      <div>
+        <span class="hero-badge" data-editable=""><span class="dot"></span>Donate</span>
+        <h1 data-editable="">Fueled by <span class="accent-word">coffee</span> and <span class="accent-word teal">kindness</span>.</h1>
+        <p class="hero-subtitle" data-editable="">GitQi is free, open source, and will stay that way. If it saved you a weekend, a design fee, or a monthly CMS bill, a small gesture back keeps the lights on and the roadmap moving.</p>
+      </div>
+      <div class="hero-media hero-media--small">
+        <div class="hero-media-frame">
+          <img src="./assets/colorful-wolf-head-with-cool-isolated-pop-art-style-backround_974629-63375.jpg" data-editable-image="" alt="A colorful illustration representing the GitQi project" style="cursor: pointer;">
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -698,7 +711,7 @@
     <div class="footer-top">
       <div>
         <a href="./index.html" class="footer-brand">
-          <span class="nav-logo" aria-hidden="true"><img src="assets/qi-icon.svg" alt=""></span>
+          <span class="nav-logo" aria-hidden="true" style="position: relative;"><img src="assets/qi-icon.svg" alt="" style="cursor: pointer;"></span>
           <span>GitQi</span>
         </a>
         <p class="footer-tagline" data-editable="">A zero-dependency, AI-enabled inline editor for static websites. Free, open source, and delightfully opinionated.</p>
