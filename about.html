@@ -173,6 +173,10 @@
   .hero-sticker-2 { bottom: 2.5rem; right: -1.3rem; background: var(--color-secondary); color: white; transform: rotate(4deg); }
   .hero-sticker-3 { top: 45%; left: -1.6rem; background: var(--color-accent-2); color: var(--color-primary); transform: rotate(-3deg); }
 
+  .hero-media--small { max-width: 340px; width: 100%; margin-left: auto; }
+  .hero-media--small .hero-media-frame { aspect-ratio: 1/1; border-radius: calc(var(--radius) * 1.2); box-shadow: 0 28px 56px -18px rgba(0,0,0,0.5); }
+  @media (max-width: 920px) { .hero-media--small { margin: 0 auto; } }
+
   .hero-blob { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.55; pointer-events: none; }
 
   /* Stats row */
@@ -485,9 +489,18 @@
 
 <section class="hero hero--page" data-zone="hero" data-zone-label="Hero" id="hero" style="">
   <div class="container hero-inner">
-    <span class="hero-badge" data-editable=""><span class="dot"></span>About GitQi</span>
-    <h1 data-editable="">Built across a <span class="accent-word">kitchen table</span>.</h1>
-    <p class="hero-subtitle" data-editable="">GitQi isn't a startup, a platform, or a funded bet. It's a small tool built for one person, validated in real time, and released because it deserved to exist for everyone else who might need it.</p>
+    <div class="hero-split">
+      <div>
+        <span class="hero-badge" data-editable=""><span class="dot"></span>About GitQi</span>
+        <h1 data-editable="">Built across a <span class="accent-word">kitchen table</span>.</h1>
+        <p class="hero-subtitle" data-editable="">GitQi isn't a startup, a platform, or a funded bet. It's a small tool built for one person, validated in real time, and released because it deserved to exist for everyone else who might need it.</p>
+      </div>
+      <div class="hero-media hero-media--small">
+        <div class="hero-media-frame">
+          <img src="./assets/brightly-colored-bear-walking-black-background-with-splats_958138-111440.jpg" data-editable-image="" alt="A colorful illustration representing the GitQi project" style="cursor: pointer;">
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -590,7 +603,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-icon pink"><img src="assets/qi-icon.svg" alt="" style="width: 65%; height: 65%; filter: brightness(0) invert(1);"></div>
+        <div class="card-icon pink" style="position: relative;"><img src="assets/qi-icon.svg" alt="" style="width: 65%; height: 65%; filter: brightness(0) invert(1); cursor: pointer;"></div>
         <h3 data-editable="">Git Qi</h3>
         <p data-editable="">Independent developers, technical freelancers, indie makers who want to read the source, contribute, or self-host <code>gitqi.js</code>. Get involved and celebrate the OSS ethos.</p>
         <div class="mt-md">
