@@ -173,6 +173,10 @@
   .hero-sticker-2 { bottom: 2.5rem; right: -1.3rem; background: var(--color-secondary); color: white; transform: rotate(4deg); }
   .hero-sticker-3 { top: 45%; left: -1.6rem; background: var(--color-accent-2); color: var(--color-primary); transform: rotate(-3deg); }
 
+  .hero-media--small { max-width: 340px; width: 100%; margin-left: auto; }
+  .hero-media--small .hero-media-frame { aspect-ratio: 1/1; border-radius: calc(var(--radius) * 1.2); box-shadow: 0 28px 56px -18px rgba(0,0,0,0.5); }
+  @media (max-width: 920px) { .hero-media--small { margin: 0 auto; } }
+
   .hero-blob { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.55; pointer-events: none; }
 
   /* Stats row */
@@ -499,14 +503,23 @@
 
 <section class="hero hero--page" data-zone="hero" data-zone-label="Hero" id="hero" style="">
   <div class="container hero-inner">
-    <span class="hero-badge" data-editable=""><span class="dot"></span>The Get Key path</span>
-    <h1 data-editable="">From zero to a <span class="accent-word">live website</span>. <br>Step by step.</h1>
-    <p class="hero-subtitle" data-editable="">No technical background needed. Each step tells you what you're doing and why — so you understand it, not just copy it. Estimated time: about 30 minutes the first time.</p>
-    <div class="progress-strip" aria-hidden="true">
-      <span class="progress-dot"><span class="n">1</span> One-time setup</span>
-      <span class="progress-dot"><span class="n">2</span> Build initial site with AI</span>
-      <span class="progress-dot"><span class="n">3</span> Edit &amp; update the content</span>
-      <span class="progress-dot"><span class="n">4</span> Publish the site</span>
+    <div class="hero-split">
+      <div>
+        <span class="hero-badge" data-editable=""><span class="dot"></span>The Get Key path</span>
+        <h1 data-editable="">From <em><span style="color: var(--color-accent-4);">zero</span></em> to a <span class="accent-word">live</span>. <br>Step by step.</h1>
+        <p class="hero-subtitle" data-editable="">No technical background needed. Each step tells you what you're doing and why — so you understand it, not just copy it. Estimated time: about 30 minutes the first time.</p>
+        <div class="progress-strip" aria-hidden="true">
+          <span class="progress-dot"><span class="n">1</span> One-time setup</span>
+          <span class="progress-dot"><span class="n">2</span> Build initial site with AI</span>
+          <span class="progress-dot"><span class="n">3</span> Edit &amp; update the content</span>
+          <span class="progress-dot"><span class="n">4</span> Publish the site</span>
+        </div>
+      </div>
+      <div class="hero-media hero-media--small">
+        <div class="hero-media-frame">
+          <img src="./assets/vibrant-psychedelic-american-buffalo-drawing_1342679-12494.jpg" data-editable-image="" alt="A colorful illustration representing the GitQi project" style="cursor: pointer;">
+        </div>
+      </div>
     </div>
   </div>
 </section>
