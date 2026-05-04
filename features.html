@@ -171,6 +171,10 @@
   .hero-sticker-2 { bottom: 2.5rem; right: -1.3rem; background: var(--color-secondary); color: white; transform: rotate(4deg); }
   .hero-sticker-3 { top: 45%; left: -1.6rem; background: var(--color-accent-2); color: var(--color-primary); transform: rotate(-3deg); }
 
+  .hero-media--small { max-width: 340px; width: 100%; margin-left: auto; }
+  .hero-media--small .hero-media-frame { aspect-ratio: 1/1; border-radius: calc(var(--radius) * 1.2); box-shadow: 0 28px 56px -18px rgba(0,0,0,0.5); }
+  @media (max-width: 920px) { .hero-media--small { margin: 0 auto; } }
+
   .hero-blob { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.55; pointer-events: none; }
 
   /* Stats row */
@@ -483,9 +487,18 @@
 
 <section class="hero hero--page" data-zone="hero" data-zone-label="Hero" id="hero" style="">
   <div class="container hero-inner">
-    <span class="hero-badge" data-editable=""><span class="dot"></span>Features &amp; editing</span>
-    <h1 data-editable="">Every lever, switch, and <span class="accent-word">shortcut</span>, in one place.</h1>
-    <p class="hero-subtitle" data-editable="">GitQi keeps its surface area small on purpose — but every feature earns its keep. This page shows you the full set, what it looks like in use, and the keyboard shortcuts that make it feel like an editor you've used for years.</p>
+    <div class="hero-split">
+      <div>
+        <span class="hero-badge" data-editable=""><span class="dot"></span>Features &amp; editing</span>
+        <h1 data-editable="">Everything you need, <em><span style="color: var(--color-accent-2);">in one place</span></em>.</h1>
+        <p class="hero-subtitle" data-editable="">GitQi keeps its surface area small on purpose — but every feature earns its keep. This page shows you the full set, what it looks like in use, and the keyboard shortcuts that make it feel like an editor you've used for years.</p>
+      </div>
+      <div class="hero-media hero-media--small">
+        <div class="hero-media-frame">
+          <img src="./assets/brightly-colored-hummingbird-flying-through-colorful-floral-frame-generative-ai_955925-44756.jpg" data-editable-image="" alt="A colorful illustration representing the GitQi project" style="cursor: pointer;">
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
