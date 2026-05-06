@@ -447,7 +447,15 @@
 </style>
 
 
-<link rel="icon" type="image/png" href="./assets/favicon.png"><link rel="apple-touch-icon" href="./assets/favicon.png"><meta name="keywords" content="features, editing, prompt, usage, showcase"></head>
+<link rel="icon" type="image/png" href="./assets/favicon.png"><link rel="apple-touch-icon" href="./assets/favicon.png"><meta name="keywords" content="features, editing, prompt, usage, showcase"><style id="__gitqi-section-overview-styles">/* all CSS needed for this section, including media queries */
+.toolbar-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: var(--space-lg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}</style></head>
 <body style="">
 <nav class="site-nav" style="">
   <div class="nav-inner">
@@ -503,12 +511,13 @@
 </section>
 
 <section class="section" data-zone="overview" data-zone-label="Overview" id="overview" style="">
-  <div class="container">
+  <div class="container" style="position: relative;">
     <div class="section-head">
       <span class="section-eyebrow" data-editable="">Overview</span>
       <h2 data-editable="">Small toolbar. <span class="accent-word magenta">Big range.</span></h2>
       <p class="section-lead" data-editable="">The editor lives in a compact floating toolbar at the top of the page. Hover interactions reveal controls in context. Every action auto-saves to disk and keeps a full undo history across the session.</p>
     </div>
+    <img src="./assets/bar.png" alt="Editor Toolbar" class="toolbar-image" data-editable-image="" style="cursor: pointer;">
     <div class="grid-3">
       <div class="card">
         <div class="card-icon accent">
