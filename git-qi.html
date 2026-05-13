@@ -5,11 +5,11 @@
     <title>Git Qi — The advanced path for those who own the whole stack.</title>
     <meta name="description" content="For GitQi users who want to go deeper: the OSS internals, self-hosting gitqi.js, contributing, and the local-first philosophy behind the tool.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lacquer:wght@400&amp;display=swap">
-    <style>
+    
+    
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lacquer:wght@400&amp;display=swap"><style>
         *, *::before, *::after { box-sizing: border-box; }
         html, body { margin: 0; padding: 0; }
 
@@ -90,6 +90,7 @@
         .nav-inner { max-width: var(--container-width); margin: 0 auto; padding: 0.85rem var(--space-md); display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); position: relative; }
         .nav-brand { display: flex; align-items: center; gap: 0.65rem; font-family: var(--font-heading); font-weight: 600; font-size: 1.3rem; color: var(--color-primary); text-decoration: none; }
         .nav-logo { width: 38px; height: 38px; border-radius: 11px; display: inline-flex; align-items: center; justify-content: center; color: var(--color-bg); font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-secondary) 50%, var(--color-accent-2) 100%); box-shadow: 0 10px 24px -10px rgba(217,70,239,0.5); }
+        .nav-logo img { width: 70%; height: 70%; filter: brightness(0) invert(1); }
         .nav-menu { display: flex; gap: 0.2rem; list-style: none; margin: 0; padding: 0; align-items: center; }
         .nav-menu a { font-weight: 500; font-size: 0.96rem; padding: 0.55rem 0.9rem; border-radius: 999px; color: var(--color-text); transition: background 0.2s ease, color 0.2s ease; display: inline-block; }
         .nav-menu a:hover { background: var(--color-bg-alt); color: var(--color-secondary); }
@@ -458,19 +459,19 @@
     <nav class="site-nav" style="">
       <div class="nav-inner">
         <a href="./index.html" class="nav-brand">
-          <span class="nav-logo" aria-hidden="true">气</span>
+          <span class="nav-logo" aria-hidden="true"><img src="assets/qi-icon.svg" alt=""></span>
           <span>GitQi</span>
         </a>
         <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
         <ul class="nav-menu">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./get-key.html">Get Key</a></li>
-          <li><a href="./git-qi.html" class="active">Git Qi</a></li>
-          <li><a href="./features.html">Features</a></li>
-          <li><a href="./donate.html">Donate</a></li>
+          <li style="position: relative;"><a href="./index.html">Home</a></li>
+          <li style="position: relative;"><a href="javascript:void(0)" data-gqe="Om90bGlhbQ==">About</a></li>
+          <li style="position: relative;"><a href="./get-key.html">Get Key</a></li>
+          <li style="position: relative;"><a href="./git-qi.html" class="active">Git Qi</a></li>
+          <li style="position: relative;"><a href="./features.html">Features</a></li>
+          <li style="position: relative;"><a href="./donate.html">Donate</a></li>
         </ul>
       </div>
       <script>
@@ -861,7 +862,7 @@
         <div class="footer-top">
           <div>
             <a href="./index.html" class="footer-brand">
-              <span class="nav-logo" aria-hidden="true">气</span>
+              <span class="nav-logo" aria-hidden="true" style="position: relative"><img src="assets/qi-icon.svg" alt="" style="cursor: pointer"></span>
               <span>GitQi</span>
             </a>
             <p class="footer-tagline" data-editable="">
@@ -929,4 +930,4 @@
     </footer>
   
 
-</body></html>
+<script data-gqe-decoder="">(function(){var d=function(s){try{return decodeURIComponent(escape(atob(s))).split('').reverse().join('')}catch(e){return ''}};document.querySelectorAll('a[data-gqe]').forEach(function(a){a.setAttribute('href',d(a.getAttribute('data-gqe')));a.removeAttribute('data-gqe')});document.querySelectorAll('[data-gqt]').forEach(function(s){s.textContent=d(s.getAttribute('data-gqt'));s.removeAttribute('data-gqt')});})();</script></body></html>
